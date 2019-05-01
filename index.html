@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rafael Agapito &#8211; Front-end Developer - WebDesigner em São Paulo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="Front-end Developer with more than 4 years of experience in web applications development with an Architecture Information and UI/UX Design background.">
+    <meta
+        content="Front end, UX, ux design, user experience, Guarulhos, SP, São Paulo, web designer, webdesigner, ribeiro design, Web, Web Design, Loja, Virtual, Loja Virtual, Design, Wordpress, Sites, Blogs, Blogger, Blogspot, HTML, XHTML, XML, Lojas Virtuais, E-commerce, Design gráfico, Designer, Freelancer, PHP, temas wordpress, Web Development"
+        name="keywords">
+    <meta content="general" name="rating">
+    <meta name="DC.creator" content="Rafael Agapito">
+    <meta name="author" content="Rafael Agapito">
+    <meta content="Global" name="distribution">
+    <meta content="all" name="ROBOTS">
+    <meta content="INDEX, FOLLOW" name="GOOGLEBOT">
+    <meta content="all" name="audience">
+    <meta content="general" name="classification">
+    <meta content="São Paulo" name="geo.placename">
+    <meta content="São Paulo" name="city">
+    <link rel="icon" href="favicon.png">
+    <style>
+        @-webkit-keyframes introAnimation {
+            0% {
+                transform: translateY(-100%)
+            }
+
+            to {
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes introAnimation {
+            0% {
+                transform: translateY(-100%)
+            }
+
+            to {
+                transform: translateY(0)
+            }
+        }
+
+        @-webkit-keyframes projectsAnimation {
+            0% {
+                transform: translateY(100%)
+            }
+
+            to {
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes projectsAnimation {
+            0% {
+                transform: translateY(100%)
+            }
+
+            to {
+                transform: translateY(0)
+            }
+        }
+
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* greek-ext */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+            unicode-range: U+1F00-1FFF;
+        }
+
+        /* greek */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+            unicode-range: U+0370-03FF;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        * {
+            margin: 0 auto;
+            padding: 0;
+            vertical-align: baseline;
+            outline: 0;
+            box-sizing: border-box
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        p,
+        section {
+            display: block
+        }
+
+        *,
+        a {
+            text-decoration: none
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        img,
+        object,
+        video {
+            max-width: 100%;
+            height: auto
+        }
+
+        iframe {
+            max-width: 100%
+        }
+
+        img {
+            vertical-align: middle
+        }
+
+        object[type="application/gas-events-abn"] {
+            display: none !important
+        }
+
+        input[type=button],
+        input[type=submit],
+        input[type=text],
+        textarea {
+            -webkit-appearance: none;
+            border-radius: 0
+        }
+
+        b,
+        strong {
+            font-weight: 700
+        }
+
+        em,
+        i {
+            font-style: italic
+        }
+
+        u {
+            text-decoration: underline
+        }
+
+        p {
+            margin: 1em 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+            position: relative
+        }
+
+        .columns:after,
+        .columns:before,
+        .container:after,
+        .container:before {
+            content: "";
+            clear: both;
+            width: 100%;
+            height: 0;
+            display: block
+        }
+
+        .columns {
+            width: 102.5%;
+            margin-left: -1.25%
+        }
+
+        .columns--no-margin {
+            width: 100%;
+            margin: 0 auto
+        }
+
+        .col-1 {
+            width: 5.83333%;
+            margin: 0 1.25% 2.5%
+        }
+
+        .col-1--noMargin {
+            width: 8.33333%;
+            margin: 0 auto !important
+        }
+
+        .col-2 {
+            width: 14.16667%;
+            margin: 0 1.25% 2.5%
+        }
+
+        .col-2--noMargin {
+            width: 16.66667%;
+            margin: 0 auto !important
+        }
+
+        .col-3 {
+            width: 22.5%;
+            margin: 0 1.25% 2.5%
+        }
+
+        .col-3--noMargin {
+            width: 25%;
+            margin: 0 auto !important
+        }
+
+        .col-4 {
+            width: 30.83333%;
+            margin: 0 1.25% 2.5%
+        }
+
+        .col-4--noMargin {
+            width: 33.33333%;
+            margin: 0 auto !important
+        }
+
+        .col-5 {
+            width: 39.16667%;
+            margin: 0 1.25% 2.5%
+        }
+
+        .col-5--noMargin {
+            width: 41.66667%;
+            margin: 0 auto !important
+        }
+
+        .col-6 {
+            width: 47.5%;
+            margin: 0 1.25% 2.5%
+        }
+
+        .col-6--noMargin {
+            width: 50%;
+            margin: 0 auto !important
+        }
+
+        .col-7 {
+            width: 55.83333%;
+            margin: 0 1.25% 2.5%
+        }
+
+        .col-7--noMargin {
+            width: 58.33333%;
+            margin: 0 auto !important
+        }
+
+        .col-8 {
+            width: 64.16667%;
+            margin: 0 1.25% 2.5%
+        }
+
+        .col-8--noMargin {
+            width: 66.66667%;
+            margin: 0 auto !important
+        }
+
+        .col-9 {
+            width: 72.5%;
+            margin: 0 1.25% 2.5%
+        }
+
+        .col-9--noMargin {
+            width: 75%;
+            margin: 0 auto !important
+        }
+
+        .col-10 {
+            width: 80.83333%;
+            margin: 0 1.25% 2.5%
+        }
+
+        .col-10--noMargin {
+            width: 83.33333%;
+            margin: 0 auto !important
+        }
+
+        .col-11 {
+            width: 89.16667%;
+            margin: 0 1.25% 2.5%
+        }
+
+        .col-11--noMargin {
+            width: 91.66667%;
+            margin: 0 auto !important
+        }
+
+        .col-12 {
+            width: 97.5%;
+            margin: 0 1.25% 2.5%
+        }
+
+        .col-12--noMargin {
+            width: 100%;
+            margin: 0 auto !important
+        }
+
+        [class*=col-] {
+            position: relative;
+            float: left;
+            min-height: 1px
+        }
+
+        @media screen and (max-width:900px) {
+            [class*=col-] {
+                width: 100% !important;
+                margin: 0 auto 30px
+            }
+        }
+
+        body {
+            font-family: 'Roboto';
+            font-weight: 100;
+            font-size: 16px;
+            line-height: 1.6em;
+            background: #fff
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #666;
+            font-weight: 700
+        }
+
+        section {
+            padding: 50px 0
+        }
+
+        a,
+        a:link,
+        a:visited,
+        body {
+            color: #666
+        }
+
+        .intro {
+            width: 100%;
+            height: 100vh;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center
+        }
+
+        @media screen and (max-width:900px) {
+            .intro {
+                height: auto;
+                padding: 10% 0
+            }
+        }
+
+        .intro__box {
+            position: fixed;
+            left: 0;
+            -webkit-animation: introAnimation .9s;
+            animation: introAnimation .9s
+        }
+
+        @media screen and (max-width:900px) {
+            .intro__box {
+                position: static
+            }
+        }
+
+        .intro__content {
+            width: 80%;
+            margin: 0 auto
+        }
+
+        .intro__detail {
+            display: block;
+            font-size: 18px;
+            font-weight: 100;
+            letter-spacing: 2px
+        }
+
+        .intro__detail:after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 1px;
+            margin: 15px 0;
+            background: #666;
+            opacity: .7
+        }
+
+        .intro__title {
+            position: relative;
+            left: -2px;
+            text-transform: uppercase;
+            font-size: 58px;
+            font-weight: 900;
+            line-height: 50px;
+            color: #06bdd0
+        }
+
+        @media screen and (max-width:600px) {
+            .intro__title {
+                font-size: 30px;
+                line-height: 30px
+            }
+        }
+
+        .intro__subtitle {
+            display: block;
+            margin: 10px auto 0;
+            font-size: 12px;
+            font-weight: 100;
+            letter-spacing: 2px;
+            color: #666;
+            text-transform: uppercase
+        }
+
+        .intro__text a {
+            border-bottom: 1px dashed #06bdd0;
+            color: #06bdd0
+        }
+
+        .intro__text a:hover {
+            opacity: .7
+        }
+
+        .intro__links-item {
+            position: relative;
+            margin: 10px 10px 0 0;
+            float: left;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px
+        }
+
+        .intro__links-item a,
+        .intro__links-item a:before {
+            -webkit-transition: all 300ms ease;
+            -moz-transition: all 300ms ease;
+            -ms-transition: all 300ms ease;
+            -o-transition: all 300ms ease;
+            transition: all 300ms ease
+        }
+
+        .intro__links-item a {
+            color: #ababab
+        }
+
+        .intro__links-item a:before {
+            content: "";
+            position: absolute;
+            bottom: 1px;
+            left: -8%;
+            display: block;
+            width: 0%;
+            height: 50%;
+            background: #06bdd0;
+            opacity: .2
+        }
+
+        .intro__links-item a:hover {
+            color: #06bdd0
+        }
+
+        .intro__links-item a:hover:before {
+            width: 115%
+        }
+
+        .projects__box {
+            float: right;
+            -webkit-animation: projectsAnimation .9s;
+            animation: projectsAnimation .9s
+        }
+
+        .projects__list {
+            width: 100%;
+            height: 100%
+        }
+
+        .projects__list:after,
+        .projects__list:before {
+            content: "";
+            clear: both;
+            width: 100%;
+            height: 0;
+            display: block
+        }
+
+        .projects__item {
+            position: relative;
+            float: left;
+            width: 50%;
+            height: 33.33vh;
+            background: #f1f1f1
+        }
+
+        .projects__item-img {
+            display: block;
+            height: 100%;
+            background-size: cover;
+            background-position: center
+        }
+
+        .projects__item-cover,
+        .projects__item-img:before {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            left: 0;
+            -webkit-transition: all 300ms ease;
+            -moz-transition: all 300ms ease;
+            -ms-transition: all 300ms ease;
+            -o-transition: all 300ms ease;
+            transition: all 300ms ease
+        }
+
+        .projects__item-img:before {
+            content: "";
+            top: 0;
+            display: block;
+            height: 100%;
+            background: currentColor;
+            z-index: 50
+        }
+
+        .projects__item-img img {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            max-width: 75%;
+            max-height: 80%;
+            right: 0;
+            left: 0
+        }
+
+        .projects__item a {
+            position: relative;
+            display: block;
+            height: 100%;
+            color: #fff
+        }
+
+        .projects__item--light .projects__item-title,
+        .projects__item--light a {
+            color: #666
+        }
+
+        .projects__item-cover {
+            z-index: 1000;
+            padding: 15px;
+            bottom: 0
+        }
+
+        .projects__item-title {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 22px
+        }
+
+        .projects__item--lightColor .projects__item-title,
+        .projects__item--lightColor a {
+            color: #000
+        }
+
+        .projects__item-skills {
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px
+        }
+
+        .projects__item-skills svg {
+            position: relative;
+            top: 5px;
+            width: 15px
+        }
+
+        .projects__item:hover .projects__item-img:before {
+            opacity: .8
+        }
+
+        .projects__item:hover .projects__item-cover {
+            opacity: 1
+        }
+
+        @media screen and (max-width:768px) {
+            .projects__item {
+                height: auto !important
+            }
+
+            .projects__item-cover {
+                position: relative;
+                opacity: 1;
+                background: #000;
+                text-align: center
+            }
+
+            .projects__item-img {
+                padding: 30px 0 0;
+                text-align: center
+            }
+
+            .projects__item-img img {
+                position: relative;
+                top: 0;
+                -webkit-transform: translate(0);
+                -moz-transform: translate(0);
+                -ms-transform: translate(0);
+                -o-transform: translate(0);
+                transform: translate(0)
+            }
+
+            .projects__item-img:before {
+                display: none
+            }
+        }
+
+        @media screen and (max-width:430px) {
+            .projects__item {
+                width: 100%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main id="app">
+        <div class="intro__box col-5 col-5--noMargin" id="intro">
+            <div class="intro">
+                <div class="intro__content">
+                    <span class="intro__detail">Rafael Agapito</span>
+                    <img
+                    src="r.png" alt="Projeto Emoções">
+                    <div class="intro__text">
+                        <p>More than 4 years of experience in web and mobile applications development with Digital
+                            Marketing and Design background.</p>
+                        <p>Currently working at <a href="https://ulend.com.br/" target="_blank">Ulend</a> and always
+                            available for new projects and experiences.</p>
+                        <p>Get in touch <a href="mailto:agabiajuda@gmail.com">agabiajuda@gmail.com</a></p>
+                    </div>
+                    <nav class="intro__links">
+                        <ul>
+                            <li class="intro__links-item"><a href="https://www.behance.net/agapitodesign" target="_blank"
+                                    title="Curriculum">Behance</a></li>
+                            <li class="intro__links-item"><a href="https://docs.google.com/document/d/1kJ8_NQ7LOloZ6JYATgbK3O7zBW-IBcVDBiyVYufzJM8/edit?usp=sharing" target="_blank"
+                                        title="Curriculum">Currículo</a></li>
+                            <li class="intro__links-item"><a href="http://linkedin.com/in/agapitodesign" target="_blank"
+                                    title="Linkedin">LinkedIn</a></li>
+                                    <li class="intro__links-item"><a href="http://api.whatsapp.com/send?phone=5511973524669&text=&source=&data=#" target="_blank"
+                                        title="Linkedin">Whatsapp</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="projects__box col-7 col-7--noMargin" id="projects">
+            <div class="projects__list">
+                <div class="projects__item">
+                    <a href="https://acasaqueaminhavoqueria.com/" target="_blank">
+                        <div class="projects__item-img" style="background-color:#d42e70; color:#d42e70"><img
+                                src="screen2.png" alt="Projeto Emoções"></div>
+                        <div class="projects__item-cover" style="background-color:#d42e70">
+                            <h2 class="projects__item-title">A casa que Minha Vó Queria</h2>
+                            <div class="projects__item-skills">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
+                                    viewBox="0 0 20 20">
+                                    <path fill="#ffffff"
+                                        d="M7.5 19.085c-0.401 0-0.778-0.156-1.061-0.438l-5.086-5.086c-0.283-0.283-0.438-0.659-0.438-1.061s0.156-0.778 0.438-1.061l8.586-8.586c0.487-0.487 1.372-0.854 2.061-0.854h4.5c0.827 0 1.5 0.673 1.5 1.5v4.5c0 0.688-0.367 1.574-0.853 2.061l-8.586 8.586c-0.283 0.283-0.659 0.438-1.061 0.438zM12 3c-0.415 0-1.060 0.267-1.353 0.561l-8.586 8.586c-0.094 0.094-0.145 0.219-0.145 0.354s0.052 0.26 0.145 0.353l5.086 5.086c0.094 0.094 0.219 0.145 0.354 0.145s0.26-0.052 0.354-0.145l8.586-8.586c0.293-0.293 0.561-0.939 0.561-1.354v-4.5c0-0.276-0.224-0.5-0.5-0.5h-4.5z">
+                                    </path>
+                                    <path fill="#ffffff"
+                                        d="M14.5 7c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM14.5 5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z">
+                                    </path>
+                                </svg> <span>Front-end,</span> <span>WordPress.</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects__item projects__item--light">
+                    <a href="http://blog.astrio.com.br" target="_blank">
+                        <div class="projects__item-img"
+                            style="background: linear-gradient(to bottom, #3bc7be 0%, #3c6ccc 100%) !important; color:#f0edec">
+                            <img src="screen1.png" alt="Ouse Escolher"></div>
+                        <div class="projects__item-cover"
+                            style="background: linear-gradient(to bottom, #3bc7be 0%, #3c6ccc 100%) !important;">
+                            <h2 class="projects__item-title" style=" color:#f0edec">Blog ASTRIO</h2>
+                            <div class="projects__item-skills">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
+                                    viewBox="0 0 20 20">
+                                    <path fill="#ffffff"
+                                        d="M7.5 19.085c-0.401 0-0.778-0.156-1.061-0.438l-5.086-5.086c-0.283-0.283-0.438-0.659-0.438-1.061s0.156-0.778 0.438-1.061l8.586-8.586c0.487-0.487 1.372-0.854 2.061-0.854h4.5c0.827 0 1.5 0.673 1.5 1.5v4.5c0 0.688-0.367 1.574-0.853 2.061l-8.586 8.586c-0.283 0.283-0.659 0.438-1.061 0.438zM12 3c-0.415 0-1.060 0.267-1.353 0.561l-8.586 8.586c-0.094 0.094-0.145 0.219-0.145 0.354s0.052 0.26 0.145 0.353l5.086 5.086c0.094 0.094 0.219 0.145 0.354 0.145s0.26-0.052 0.354-0.145l8.586-8.586c0.293-0.293 0.561-0.939 0.561-1.354v-4.5c0-0.276-0.224-0.5-0.5-0.5h-4.5z">
+                                    </path>
+                                    <path fill="#ffffff"
+                                        d="M14.5 7c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM14.5 5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z">
+                                    </path>
+                                </svg> <span style=" color:#f0edec">Front-end,</span> <span
+                                    style=" color:#f0edec">WordPress,</span> <span
+                                    style=" color:#f0edec">WebDesign.</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects__item">
+                    <a href="http://perugluglu.net/hsl/white-belt/modulo-1/" target="_blank">
+                        <div class="projects__item-img" style="background-color:#00c8f1; color:#00c8f1"><img
+                                src="screen5.png" alt="Felipe Massa"></div>
+                        <div class="projects__item-cover" style="background-color:#00c8f1">
+                            <h2 class="projects__item-title">Curso White Belt</h2>
+                            <div class="projects__item-skills">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
+                                    viewBox="0 0 20 20">
+                                    <path fill="#ffffff"
+                                        d="M7.5 19.085c-0.401 0-0.778-0.156-1.061-0.438l-5.086-5.086c-0.283-0.283-0.438-0.659-0.438-1.061s0.156-0.778 0.438-1.061l8.586-8.586c0.487-0.487 1.372-0.854 2.061-0.854h4.5c0.827 0 1.5 0.673 1.5 1.5v4.5c0 0.688-0.367 1.574-0.853 2.061l-8.586 8.586c-0.283 0.283-0.659 0.438-1.061 0.438zM12 3c-0.415 0-1.060 0.267-1.353 0.561l-8.586 8.586c-0.094 0.094-0.145 0.219-0.145 0.354s0.052 0.26 0.145 0.353l5.086 5.086c0.094 0.094 0.219 0.145 0.354 0.145s0.26-0.052 0.354-0.145l8.586-8.586c0.293-0.293 0.561-0.939 0.561-1.354v-4.5c0-0.276-0.224-0.5-0.5-0.5h-4.5z">
+                                    </path>
+                                    <path fill="#ffffff"
+                                        d="M14.5 7c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM14.5 5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z">
+                                    </path>
+                                </svg> <span>Front-end.</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects__item">
+                    <a href="https://xd.adobe.com/view/aec1bf41-7df8-45f3-7054-f48c485f1d1c-d8f0/" target="_blank">
+                        <div class="projects__item-img" style="background-color:#ffd700; color:#ffd700"><img
+                                src="screen3.png" alt="Temperos MasterChef"></div>
+                        <div class="projects__item-cover" style="background-color:#ffd700">
+                            <h2 class="projects__item-title">Boi na Linha Fretes</h2>
+                            <div class="projects__item-skills">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
+                                    viewBox="0 0 20 20">
+                                    <path fill="#ffffff"
+                                        d="M7.5 19.085c-0.401 0-0.778-0.156-1.061-0.438l-5.086-5.086c-0.283-0.283-0.438-0.659-0.438-1.061s0.156-0.778 0.438-1.061l8.586-8.586c0.487-0.487 1.372-0.854 2.061-0.854h4.5c0.827 0 1.5 0.673 1.5 1.5v4.5c0 0.688-0.367 1.574-0.853 2.061l-8.586 8.586c-0.283 0.283-0.659 0.438-1.061 0.438zM12 3c-0.415 0-1.060 0.267-1.353 0.561l-8.586 8.586c-0.094 0.094-0.145 0.219-0.145 0.354s0.052 0.26 0.145 0.353l5.086 5.086c0.094 0.094 0.219 0.145 0.354 0.145s0.26-0.052 0.354-0.145l8.586-8.586c0.293-0.293 0.561-0.939 0.561-1.354v-4.5c0-0.276-0.224-0.5-0.5-0.5h-4.5z">
+                                    </path>
+                                    <path fill="#ffffff"
+                                        d="M14.5 7c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM14.5 5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z">
+                                    </path>
+                                </svg> <span>Adobe XD,</span><span> UI-UX.</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects__item">
+                    <a href="https://www.ulend.com.br" target="_blank">
+                        <div class="projects__item-img" style="background-color:#1441a0; color:#1441a0"><img
+                                src="screen7.png" alt="Start"></div>
+                        <div class="projects__item-cover" style="background-color:#1441a0">
+                            <h2 class="projects__item-title">Ulend</h2>
+                            <div class="projects__item-skills">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
+                                    viewBox="0 0 20 20">
+                                    <path fill="#ffffff"
+                                        d="M7.5 19.085c-0.401 0-0.778-0.156-1.061-0.438l-5.086-5.086c-0.283-0.283-0.438-0.659-0.438-1.061s0.156-0.778 0.438-1.061l8.586-8.586c0.487-0.487 1.372-0.854 2.061-0.854h4.5c0.827 0 1.5 0.673 1.5 1.5v4.5c0 0.688-0.367 1.574-0.853 2.061l-8.586 8.586c-0.283 0.283-0.659 0.438-1.061 0.438zM12 3c-0.415 0-1.060 0.267-1.353 0.561l-8.586 8.586c-0.094 0.094-0.145 0.219-0.145 0.354s0.052 0.26 0.145 0.353l5.086 5.086c0.094 0.094 0.219 0.145 0.354 0.145s0.26-0.052 0.354-0.145l8.586-8.586c0.293-0.293 0.561-0.939 0.561-1.354v-4.5c0-0.276-0.224-0.5-0.5-0.5h-4.5z">
+                                    </path>
+                                    <path fill="#ffffff"
+                                        d="M14.5 7c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM14.5 5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z">
+                                    </path>
+                                </svg> <span>Front-end, WordPress.</span></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="projects__item">
+                    <a href="https://www.boinalinha.com" target="_blank">
+                        <div class="projects__item-img" style="background-color:#f9aa1a; color:#f9aa1a"><img
+                                src="screen4.png" alt="3º Cartório de SCS"></div>
+                        <div class="projects__item-cover" style="background-color:#f9aa1a">
+                            <h2 class="projects__item-title">Boi na Linha</h2>
+                            <div class="projects__item-skills">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
+                                    viewBox="0 0 20 20">
+                                    <path fill="#ffffff"
+                                        d="M7.5 19.085c-0.401 0-0.778-0.156-1.061-0.438l-5.086-5.086c-0.283-0.283-0.438-0.659-0.438-1.061s0.156-0.778 0.438-1.061l8.586-8.586c0.487-0.487 1.372-0.854 2.061-0.854h4.5c0.827 0 1.5 0.673 1.5 1.5v4.5c0 0.688-0.367 1.574-0.853 2.061l-8.586 8.586c-0.283 0.283-0.659 0.438-1.061 0.438zM12 3c-0.415 0-1.060 0.267-1.353 0.561l-8.586 8.586c-0.094 0.094-0.145 0.219-0.145 0.354s0.052 0.26 0.145 0.353l5.086 5.086c0.094 0.094 0.219 0.145 0.354 0.145s0.26-0.052 0.354-0.145l8.586-8.586c0.293-0.293 0.561-0.939 0.561-1.354v-4.5c0-0.276-0.224-0.5-0.5-0.5h-4.5z">
+                                    </path>
+                                    <path fill="#ffffff"
+                                        d="M14.5 7c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM14.5 5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z">
+                                    </path>
+                                </svg> <span>Front-end.</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects__item">
+                    <a href="http://estudio86.com.br/clientes18/limine-wp/" target="_blank">
+                        <div class="projects__item-img" style="background-color:#61abf1; color:#61abf1"><img
+                                src="screen6.png" alt="ZEUS Inovação"></div>
+                        <div class="projects__item-cover" style="background-color:#61abf1">
+                            <h2 class="projects__item-title">Limine </h2>
+                            <div class="projects__item-skills">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
+                                    viewBox="0 0 20 20">
+                                    <path fill="#ffffff"
+                                        d="M7.5 19.085c-0.401 0-0.778-0.156-1.061-0.438l-5.086-5.086c-0.283-0.283-0.438-0.659-0.438-1.061s0.156-0.778 0.438-1.061l8.586-8.586c0.487-0.487 1.372-0.854 2.061-0.854h4.5c0.827 0 1.5 0.673 1.5 1.5v4.5c0 0.688-0.367 1.574-0.853 2.061l-8.586 8.586c-0.283 0.283-0.659 0.438-1.061 0.438zM12 3c-0.415 0-1.060 0.267-1.353 0.561l-8.586 8.586c-0.094 0.094-0.145 0.219-0.145 0.354s0.052 0.26 0.145 0.353l5.086 5.086c0.094 0.094 0.219 0.145 0.354 0.145s0.26-0.052 0.354-0.145l8.586-8.586c0.293-0.293 0.561-0.939 0.561-1.354v-4.5c0-0.276-0.224-0.5-0.5-0.5h-4.5z">
+                                    </path>
+                                    <path fill="#ffffff"
+                                        d="M14.5 7c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM14.5 5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z">
+                                    </path>
+                                </svg> <span>Front-end,</span> <span>WordPress.</span></div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="projects__item">
+                    <a href="https://estudio86.com.br/clientes18/nuvem-dos-anjinhos/" target="_blank">
+                        <div class="projects__item-img" style="background-color:#00ce4f; color:#00ce4f"><img
+                                src="screen8.png" alt="LIGA SP"></div>
+                        <div class="projects__item-cover" style="background-color:#00ce4f">
+                            <h2 class="projects__item-title">Núvem dos Anjinhos</h2>
+                            <div class="projects__item-skills">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
+                                    viewBox="0 0 20 20">
+                                    <path fill="#ffffff"
+                                        d="M7.5 19.085c-0.401 0-0.778-0.156-1.061-0.438l-5.086-5.086c-0.283-0.283-0.438-0.659-0.438-1.061s0.156-0.778 0.438-1.061l8.586-8.586c0.487-0.487 1.372-0.854 2.061-0.854h4.5c0.827 0 1.5 0.673 1.5 1.5v4.5c0 0.688-0.367 1.574-0.853 2.061l-8.586 8.586c-0.283 0.283-0.659 0.438-1.061 0.438zM12 3c-0.415 0-1.060 0.267-1.353 0.561l-8.586 8.586c-0.094 0.094-0.145 0.219-0.145 0.354s0.052 0.26 0.145 0.353l5.086 5.086c0.094 0.094 0.219 0.145 0.354 0.145s0.26-0.052 0.354-0.145l8.586-8.586c0.293-0.293 0.561-0.939 0.561-1.354v-4.5c0-0.276-0.224-0.5-0.5-0.5h-4.5z">
+                                    </path>
+                                    <path fill="#ffffff"
+                                        d="M14.5 7c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM14.5 5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z">
+                                    </path>
+                                </svg> <span>Front-end</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects__item">
+                    <a href="http://estudio86.com.br/clientes19/tem-troco/#oque" target="_blank">
+                        <div class="projects__item-img" style="background-color:#002933; color:#002933"><img
+                                src="screen0.png" alt="Dr.Cannabis Blog"></div>
+                        <div class="projects__item-cover" style="background-color:#002933">
+                            <h2 class="projects__item-title">Tem troco</h2>
+                            <div class="projects__item-skills">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
+                                    viewBox="0 0 20 20">
+                                    <path fill="#ffffff"
+                                        d="M7.5 19.085c-0.401 0-0.778-0.156-1.061-0.438l-5.086-5.086c-0.283-0.283-0.438-0.659-0.438-1.061s0.156-0.778 0.438-1.061l8.586-8.586c0.487-0.487 1.372-0.854 2.061-0.854h4.5c0.827 0 1.5 0.673 1.5 1.5v4.5c0 0.688-0.367 1.574-0.853 2.061l-8.586 8.586c-0.283 0.283-0.659 0.438-1.061 0.438zM12 3c-0.415 0-1.060 0.267-1.353 0.561l-8.586 8.586c-0.094 0.094-0.145 0.219-0.145 0.354s0.052 0.26 0.145 0.353l5.086 5.086c0.094 0.094 0.219 0.145 0.354 0.145s0.26-0.052 0.354-0.145l8.586-8.586c0.293-0.293 0.561-0.939 0.561-1.354v-4.5c0-0.276-0.224-0.5-0.5-0.5h-4.5z">
+                                    </path>
+                                    <path fill="#ffffff"
+                                        d="M14.5 7c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM14.5 5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z">
+                                    </path>
+                                </svg> <span>Front-end,</span> <span>WordPress.</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects__item">
+                    <a href="http://estudio86.com.br/clientes19/magnus/" target="_blank">
+                        <div class="projects__item-img" style="background-color:#b31818; color:#b31818"><img
+                                src="screen9.png" alt="BMJ Brasil"></div>
+                        <div class="projects__item-cover" style="background-color:#b31818">
+                            <h2 class="projects__item-title">Magnus</h2>
+                            <div class="projects__item-skills">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
+                                    viewBox="0 0 20 20">
+                                    <path fill="#ffffff"
+                                        d="M7.5 19.085c-0.401 0-0.778-0.156-1.061-0.438l-5.086-5.086c-0.283-0.283-0.438-0.659-0.438-1.061s0.156-0.778 0.438-1.061l8.586-8.586c0.487-0.487 1.372-0.854 2.061-0.854h4.5c0.827 0 1.5 0.673 1.5 1.5v4.5c0 0.688-0.367 1.574-0.853 2.061l-8.586 8.586c-0.283 0.283-0.659 0.438-1.061 0.438zM12 3c-0.415 0-1.060 0.267-1.353 0.561l-8.586 8.586c-0.094 0.094-0.145 0.219-0.145 0.354s0.052 0.26 0.145 0.353l5.086 5.086c0.094 0.094 0.219 0.145 0.354 0.145s0.26-0.052 0.354-0.145l8.586-8.586c0.293-0.293 0.561-0.939 0.561-1.354v-4.5c0-0.276-0.224-0.5-0.5-0.5h-4.5z">
+                                    </path>
+                                    <path fill="#ffffff"
+                                        d="M14.5 7c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM14.5 5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z">
+                                    </path>
+                                </svg> <span>Front-end,</span> <span>WordPress.</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
